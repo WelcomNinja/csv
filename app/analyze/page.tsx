@@ -11,10 +11,17 @@ import type { ArrowTable } from '@duckdb/duckdb-wasm';
 export default function Analyze() {
   const [table, setTable] = useState<ArrowTable | null>(null);
   const [viz, setViz] = useState<'table'|'line'|'bar'>('table');
+  const [error, setError] = useState<string | null>(null);
 
   const onRun = async (sql: string) => {
-    const res = await runQueryOrPredict(sql);
-    setTable(res.data ?? null);
+    setError(null);
+    try {
+      const res = await runQueryOrPredict(sql);
+      setTable(res.data ?? null);
+    } catch (e:any) {
+      setError(e.message || String(e));
+      setTable(null);
+    }
   };
 
   const chartData = useMemo(() => {
@@ -32,15 +39,24 @@ export default function Analyze() {
 
   return (
     <main className="space-y-6">
-      <section className="p-4 rounded-2xl bg-white shadow">
-        <UploadArea />
+      <section className="card">
+        <div className="flex items-center" style={{justifyContent:'space-between', gap: 12}}>
+          <div>
+            <div className="h1" style={{fontSize:18}}>Анализ данных</div>
+            <div className="subtle">Загрузите файлы и выполните SQL</div>
+          </div>
+        </div>
+        <div style={{marginTop:12}}>
+          <UploadArea />
+        </div>
       </section>
 
-      <section className="p-4 rounded-2xl bg-white shadow space-y-4">
+      <section className="card" style={{display:'grid', gap: 12}}>
         <SQLStudio onRun={onRun} />
-        <div className="flex items-center gap-2">
-          <label>Вид: </label>
-          <select className="border rounded px-2 py-1" value={viz} onChange={e=>setViz(e.target.value as any)}>
+        {error && <div className="card" style={{background:'#fff7f7', borderColor:'#fecaca'}}><div className="muted" style={{color:'#b91c1c'}}>Ошибка SQL: {error}</div></div>}
+        <div className="flex items-center" style={{gap: 8}}>
+          <label className="subtle">Вид</label>
+          <select className="select" value={viz} onChange={e=>setViz(e.target.value as any)}>
             <option value="table">Таблица</option>
             <option value="line">Линейный график</option>
             <option value="bar">Столбчатый график</option>

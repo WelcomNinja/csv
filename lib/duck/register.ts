@@ -1,9 +1,11 @@
 'use client';
 import { getDuck } from './duckClient';
-import grok from 'grok-js';
 
 async function ensureGrok() {
   try {
+    const dynamicImport = (0, eval)('import');
+    const grokMod = await dynamicImport('grok-js');
+    const grok = grokMod.default || grokMod;
     await grok.loadDefault(async (p:string) => {
       const res = await fetch(`/patterns/${p}`);
       return await res.text();

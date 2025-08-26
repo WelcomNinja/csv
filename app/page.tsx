@@ -3,11 +3,11 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="space-y-6">
-      <section className="p-4 rounded-2xl bg-white shadow">
-        <h2 className="text-lg font-semibold">Добро пожаловать в WelcomeCSV</h2>
-        <p className="text-sm opacity-75">Инструмент для загрузки CSV/логов, выполнения SQL в браузере и ONNX-прогнозирования.</p>
-        <div className="mt-4 flex gap-2">
-          <Link href="/analyze"><a className="px-4 py-2 border rounded bg-slate-100">Перейти в анализ</a></Link>
+      <section className="card">
+        <div className="h1">Добро пожаловать в WelcomeCSV</div>
+        <p className="muted">Загрузите CSV/логи/JSON и выполняйте SQL прямо в браузере.</p>
+        <div style={{marginTop:12}}>
+          <Link href="/analyze" className="btn btn-primary">Перейти в анализ</Link>
         </div>
       </section>
     </main>

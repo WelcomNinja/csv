@@ -1,0 +1,523 @@
+{
+  "components/SQLStudio.tsx -> monaco-editor": {
+    "id": "components/SQLStudio.tsx -> monaco-editor",
+    "files": [
+      "static/css/_app-pages-browser_node_modules_monaco-editor_esm_vs_editor_editor_main_js.css",
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_editor_editor_main_js.js"
+    ]
+  },
+  "lib/onnx/runtime.ts -> @/lib/duck/duckClient": {
+    "id": "lib/onnx/runtime.ts -> @/lib/duck/duckClient",
+    "files": []
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/abap/abap.contribution.js -> ./abap.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/abap/abap.contribution.js -> ./abap.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_abap_abap_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/apex/apex.contribution.js -> ./apex.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/apex/apex.contribution.js -> ./apex.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_apex_apex_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/azcli/azcli.contribution.js -> ./azcli.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/azcli/azcli.contribution.js -> ./azcli.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_azcli_azcli_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/bat/bat.contribution.js -> ./bat.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/bat/bat.contribution.js -> ./bat.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_bat_bat_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/bicep/bicep.contribution.js -> ./bicep.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/bicep/bicep.contribution.js -> ./bicep.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_bicep_bicep_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/cameligo/cameligo.contribution.js -> ./cameligo.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/cameligo/cameligo.contribution.js -> ./cameligo.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_cameligo_cameligo_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/clojure/clojure.contribution.js -> ./clojure.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/clojure/clojure.contribution.js -> ./clojure.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_clojure_clojure_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/coffee/coffee.contribution.js -> ./coffee.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/coffee/coffee.contribution.js -> ./coffee.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_coffee_coffee_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/cpp/cpp.contribution.js -> ./cpp.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/cpp/cpp.contribution.js -> ./cpp.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_cpp_cpp_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/csharp/csharp.contribution.js -> ./csharp.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/csharp/csharp.contribution.js -> ./csharp.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_csharp_csharp_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/csp/csp.contribution.js -> ./csp.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/csp/csp.contribution.js -> ./csp.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_csp_csp_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/css/css.contribution.js -> ./css.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/css/css.contribution.js -> ./css.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_css_css_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/cypher/cypher.contribution.js -> ./cypher.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/cypher/cypher.contribution.js -> ./cypher.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_cypher_cypher_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/dart/dart.contribution.js -> ./dart.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/dart/dart.contribution.js -> ./dart.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_dart_dart_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/dockerfile/dockerfile.contribution.js -> ./dockerfile.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/dockerfile/dockerfile.contribution.js -> ./dockerfile.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_dockerfile_dockerfile_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/ecl/ecl.contribution.js -> ./ecl.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/ecl/ecl.contribution.js -> ./ecl.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_ecl_ecl_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/elixir/elixir.contribution.js -> ./elixir.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/elixir/elixir.contribution.js -> ./elixir.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_elixir_elixir_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/flow9/flow9.contribution.js -> ./flow9.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/flow9/flow9.contribution.js -> ./flow9.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_flow9_flow9_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/freemarker2/freemarker2.contribution.js -> ./freemarker2.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/freemarker2/freemarker2.contribution.js -> ./freemarker2.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_freemarker2_freemarker2_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/fsharp/fsharp.contribution.js -> ./fsharp.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/fsharp/fsharp.contribution.js -> ./fsharp.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_fsharp_fsharp_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/go/go.contribution.js -> ./go.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/go/go.contribution.js -> ./go.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_go_go_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/graphql/graphql.contribution.js -> ./graphql.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/graphql/graphql.contribution.js -> ./graphql.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_graphql_graphql_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/handlebars/handlebars.contribution.js -> ./handlebars.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/handlebars/handlebars.contribution.js -> ./handlebars.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_handlebars_handlebars_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/hcl/hcl.contribution.js -> ./hcl.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/hcl/hcl.contribution.js -> ./hcl.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_hcl_hcl_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/html/html.contribution.js -> ./html.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/html/html.contribution.js -> ./html.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_html_html_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/ini/ini.contribution.js -> ./ini.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/ini/ini.contribution.js -> ./ini.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_ini_ini_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/java/java.contribution.js -> ./java.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/java/java.contribution.js -> ./java.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_java_java_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/javascript/javascript.contribution.js -> ./javascript.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/javascript/javascript.contribution.js -> ./javascript.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_javascript_javascript_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/julia/julia.contribution.js -> ./julia.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/julia/julia.contribution.js -> ./julia.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_julia_julia_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/kotlin/kotlin.contribution.js -> ./kotlin.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/kotlin/kotlin.contribution.js -> ./kotlin.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_kotlin_kotlin_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/less/less.contribution.js -> ./less.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/less/less.contribution.js -> ./less.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_less_less_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/lexon/lexon.contribution.js -> ./lexon.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/lexon/lexon.contribution.js -> ./lexon.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_lexon_lexon_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/liquid/liquid.contribution.js -> ./liquid.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/liquid/liquid.contribution.js -> ./liquid.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_liquid_liquid_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/lua/lua.contribution.js -> ./lua.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/lua/lua.contribution.js -> ./lua.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_lua_lua_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/m3/m3.contribution.js -> ./m3.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/m3/m3.contribution.js -> ./m3.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_m3_m3_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/markdown/markdown.contribution.js -> ./markdown.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/markdown/markdown.contribution.js -> ./markdown.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_markdown_markdown_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/mdx/mdx.contribution.js -> ./mdx.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/mdx/mdx.contribution.js -> ./mdx.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_mdx_mdx_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/mips/mips.contribution.js -> ./mips.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/mips/mips.contribution.js -> ./mips.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_mips_mips_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/msdax/msdax.contribution.js -> ./msdax.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/msdax/msdax.contribution.js -> ./msdax.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_msdax_msdax_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/mysql/mysql.contribution.js -> ./mysql.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/mysql/mysql.contribution.js -> ./mysql.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_mysql_mysql_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/objective-c/objective-c.contribution.js -> ./objective-c.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/objective-c/objective-c.contribution.js -> ./objective-c.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_objective-c_objective-c_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/pascal/pascal.contribution.js -> ./pascal.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/pascal/pascal.contribution.js -> ./pascal.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_pascal_pascal_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/pascaligo/pascaligo.contribution.js -> ./pascaligo.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/pascaligo/pascaligo.contribution.js -> ./pascaligo.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_pascaligo_pascaligo_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/perl/perl.contribution.js -> ./perl.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/perl/perl.contribution.js -> ./perl.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_perl_perl_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/pgsql/pgsql.contribution.js -> ./pgsql.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/pgsql/pgsql.contribution.js -> ./pgsql.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_pgsql_pgsql_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/php/php.contribution.js -> ./php.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/php/php.contribution.js -> ./php.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_php_php_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/pla/pla.contribution.js -> ./pla.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/pla/pla.contribution.js -> ./pla.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_pla_pla_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/postiats/postiats.contribution.js -> ./postiats.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/postiats/postiats.contribution.js -> ./postiats.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_postiats_postiats_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/powerquery/powerquery.contribution.js -> ./powerquery.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/powerquery/powerquery.contribution.js -> ./powerquery.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_powerquery_powerquery_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/powershell/powershell.contribution.js -> ./powershell.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/powershell/powershell.contribution.js -> ./powershell.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_powershell_powershell_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/protobuf/protobuf.contribution.js -> ./protobuf.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/protobuf/protobuf.contribution.js -> ./protobuf.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_protobuf_protobuf_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/pug/pug.contribution.js -> ./pug.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/pug/pug.contribution.js -> ./pug.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_pug_pug_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/python/python.contribution.js -> ./python.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/python/python.contribution.js -> ./python.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_python_python_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/qsharp/qsharp.contribution.js -> ./qsharp.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/qsharp/qsharp.contribution.js -> ./qsharp.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_qsharp_qsharp_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/r/r.contribution.js -> ./r.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/r/r.contribution.js -> ./r.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_r_r_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/razor/razor.contribution.js -> ./razor.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/razor/razor.contribution.js -> ./razor.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_razor_razor_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/redis/redis.contribution.js -> ./redis.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/redis/redis.contribution.js -> ./redis.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_redis_redis_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/redshift/redshift.contribution.js -> ./redshift.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/redshift/redshift.contribution.js -> ./redshift.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_redshift_redshift_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/restructuredtext/restructuredtext.contribution.js -> ./restructuredtext.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/restructuredtext/restructuredtext.contribution.js -> ./restructuredtext.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_restructuredtext_restruc-00a031.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/ruby/ruby.contribution.js -> ./ruby.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/ruby/ruby.contribution.js -> ./ruby.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_ruby_ruby_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/rust/rust.contribution.js -> ./rust.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/rust/rust.contribution.js -> ./rust.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_rust_rust_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/sb/sb.contribution.js -> ./sb.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/sb/sb.contribution.js -> ./sb.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_sb_sb_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/scala/scala.contribution.js -> ./scala.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/scala/scala.contribution.js -> ./scala.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_scala_scala_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/scheme/scheme.contribution.js -> ./scheme.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/scheme/scheme.contribution.js -> ./scheme.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_scheme_scheme_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/scss/scss.contribution.js -> ./scss.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/scss/scss.contribution.js -> ./scss.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_scss_scss_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/shell/shell.contribution.js -> ./shell.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/shell/shell.contribution.js -> ./shell.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_shell_shell_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/solidity/solidity.contribution.js -> ./solidity.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/solidity/solidity.contribution.js -> ./solidity.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_solidity_solidity_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/sophia/sophia.contribution.js -> ./sophia.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/sophia/sophia.contribution.js -> ./sophia.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_sophia_sophia_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/sparql/sparql.contribution.js -> ./sparql.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/sparql/sparql.contribution.js -> ./sparql.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_sparql_sparql_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/sql/sql.contribution.js -> ./sql.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/sql/sql.contribution.js -> ./sql.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_sql_sql_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/st/st.contribution.js -> ./st.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/st/st.contribution.js -> ./st.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_st_st_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/swift/swift.contribution.js -> ./swift.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/swift/swift.contribution.js -> ./swift.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_swift_swift_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/systemverilog/systemverilog.contribution.js -> ./systemverilog.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/systemverilog/systemverilog.contribution.js -> ./systemverilog.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_systemverilog_systemverilog_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/tcl/tcl.contribution.js -> ./tcl.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/tcl/tcl.contribution.js -> ./tcl.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_tcl_tcl_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/twig/twig.contribution.js -> ./twig.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/twig/twig.contribution.js -> ./twig.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_twig_twig_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/typescript/typescript.contribution.js -> ./typescript.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/typescript/typescript.contribution.js -> ./typescript.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_typescript_typescript_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/typespec/typespec.contribution.js -> ./typespec.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/typespec/typespec.contribution.js -> ./typespec.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_typespec_typespec_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/vb/vb.contribution.js -> ./vb.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/vb/vb.contribution.js -> ./vb.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_vb_vb_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/wgsl/wgsl.contribution.js -> ./wgsl.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/wgsl/wgsl.contribution.js -> ./wgsl.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_wgsl_wgsl_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/xml/xml.contribution.js -> ./xml.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/xml/xml.contribution.js -> ./xml.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_xml_xml_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/basic-languages/yaml/yaml.contribution.js -> ./yaml.js": {
+    "id": "node_modules/monaco-editor/esm/vs/basic-languages/yaml/yaml.contribution.js -> ./yaml.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_basic-languages_yaml_yaml_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/language/css/monaco.contribution.js -> ./cssMode.js": {
+    "id": "node_modules/monaco-editor/esm/vs/language/css/monaco.contribution.js -> ./cssMode.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_language_css_cssMode_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/language/html/monaco.contribution.js -> ./htmlMode.js": {
+    "id": "node_modules/monaco-editor/esm/vs/language/html/monaco.contribution.js -> ./htmlMode.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_language_html_htmlMode_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/language/json/monaco.contribution.js -> ./jsonMode.js": {
+    "id": "node_modules/monaco-editor/esm/vs/language/json/monaco.contribution.js -> ./jsonMode.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_language_json_jsonMode_js.js"
+    ]
+  },
+  "node_modules/monaco-editor/esm/vs/language/typescript/monaco.contribution.js -> ./tsMode.js": {
+    "id": "node_modules/monaco-editor/esm/vs/language/typescript/monaco.contribution.js -> ./tsMode.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_monaco-editor_esm_vs_language_typescript_tsMode_js.js"
+    ]
+  }
+}

@@ -16,7 +16,7 @@ export default function UploadArea() {
         continue;
       }
       try {
-        if (/\.csv$/i.test(file.name) || /\.tsv$/i.test(file.name)) {
+        if (/\.(csv|tsv)$/i.test(file.name)) {
           await registerCSV(file, name.replace(/\.(csv|tsv)$/i,'').toLowerCase());
           setStatus(`CSV/TSV зарегистрирован: ${file.name}`);
         } else if (/\.log$/i.test(file.name)) {
@@ -51,9 +51,14 @@ export default function UploadArea() {
       className="border rounded-2xl p-4"
       style={{borderStyle: 'dashed'}}
     >
-      <p className="text-sm">Перетащите сюда файлы: <b>.csv</b>, <b>.tsv</b>, <b>.log</b>, <b>.json</b>, <b>.onnx</b>. Максимум 2 ГБ.</p>
-      <input type="file" multiple onChange={e=>onFiles(e.target.files)} className="mt-2" />
-      <p className="text-sm opacity-75 mt-2">{status}</p>
+      <div className="muted" style={{display:'flex', justifyContent:'space-between', alignItems:'center', gap: 8}}>
+        <span>Перетащите файлы: .csv, .tsv, .log, .json, .onnx</span>
+        <span className="badge">до 2 ГБ</span>
+      </div>
+      <div style={{marginTop:8}}>
+        <input type="file" multiple onChange={e=>onFiles(e.target.files)} className="input" />
+      </div>
+      <p className="subtle" style={{marginTop:8}}>{status}</p>
     </div>
   );
 }
