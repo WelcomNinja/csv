@@ -2,7 +2,6 @@
 
 Инструмент для быстрой аналитики данных прямо в браузере: загрузите CSV/логи/JSON, выполните SQL-запросы локально (DuckDB-WASM), визуализируйте данные (ECharts) и делайте предсказания ONNX-моделями — без бэкенда и без передачи данных на сервер.
 
-
 ## Возможности
 - Загрузка файлов: **.csv**, **.tsv**, **.log** (nginx/apache), **.json**, **.onnx** (модель)
 - Автоматическая регистрация файлов как `VIEW` в DuckDB (read_csv_auto/read_json_auto)
@@ -22,19 +21,40 @@
 - Grok patterns (`grok-js`) для логов
 - TypeScript, ESLint
 
-## Быстрый старт
-1. Установите зависимости:
+## Быстрый старт (локально)
+1. Установите зависимости и запустите dev-сервер:
 ```bash
 npm install
-```
-2. Запустите dev-сервер:
-```bash
 npm run dev
 ```
-3. Откройте в браузере:
+Откройте: http://localhost:3000
+
+2. Продакшен-сборка:
 ```bash
-http://localhost:3000
+npm run build
+npm run start
 ```
+
+## Quick Start через degit (как у n8n — одна команда)
+```bash
+npx --yes degit <your-github-user>/WelcomeCSV welcome-csv
+cd welcome-csv
+npm install
+npm run dev
+# прод:
+# npm run build && npm run start
+```
+
+## Quick Start через Docker
+1. Сборка образа:
+```bash
+docker build -t welcome-csv .
+```
+2. Запуск:
+```bash
+docker run --rm -p 3000:3000 welcome-csv
+```
+Затем откройте http://localhost:3000
 
 ## Страницы
 - `/` — приветственная страница и переход в анализ
@@ -42,13 +62,13 @@ http://localhost:3000
 - `/api/health` — простая проверка доступности (`{"ok": true}`)
 
 ## Как это работает
-- `lib/duck/duckClient.ts` — инициализация DuckDB-WASM и worker, lazy singleton
+- `lib/duck/duckClient.ts` — инициализация DuckDB-WASM и worker, lazy singleton (fallback без threads при отсутствии COOP/COEP)
 - `lib/duck/register.ts` — регистрация CSV/JSON/LOG во внутренней FS DuckDB и создание `VIEW`
-- `lib/duck/sql.ts` — `runSQL`, `listTables`, DSL-парсер `PREDICT` и объединение результатов
-- `lib/onnx/runtime.ts` — загрузка моделей ONNX и инференс по данным ArrowTable
+- `lib/duck/sql.ts` — `runSQL`, `listTables`, `listColumns`, DSL-парсер `PREDICT` и объединение результатов
+- `lib/onnx/runtime.ts` — загрузка моделей ONNX и инференс по данным Arrow Table
 - Компоненты:
   - `components/UploadArea.tsx` — drag&drop/ввод файлов, статус
-  - `components/SQLStudio.tsx` — Monaco Editor, запуск запросов
+  - `components/SQLStudio.tsx` — редактор + сайдбар схемы (таблицы/колонки), тулбар
   - `components/DataTable.tsx` — рендер результата SQL (до 500 строк)
   - `components/ChartView.tsx` — `line`/`bar` графики
 
@@ -61,31 +81,18 @@ http://localhost:3000
    - ONNX → загрузится модель с именем файла
 3. Выполните SQL-запрос. Примеры:
 ```sql
--- Простая проверка
-SELECT 1 AS x, 2 AS y;
-
--- Просмотр таблиц
 PRAGMA show_tables;
-
--- Агрегация по логам
-SELECT status_code, COUNT(*) AS cnt FROM access_log GROUP BY 1 ORDER BY cnt DESC;
-
--- Инференс ONNX (см. ниже)
-PREDICT USING mymodel WITH QUERY SELECT * FROM mytable RETURN PROBA;
+SELECT * FROM your_table LIMIT 10;
+SELECT COUNT(*) FROM your_table;
 ```
 4. Выберите вид отображения: Таблица / Линейный график / Столбчатый график.
 
 ## ONNX-инференс (DSL)
-- Загрузите файл модели `mymodel.onnx` → модель будет доступна как `mymodel`.
-- Выполните запрос в формате:
 ```sql
 PREDICT USING mymodel WITH QUERY SELECT * FROM mytable;
-```
-- Опционально вернуть вероятности:
-```sql
+-- или вероятности
 PREDICT USING mymodel WITH QUERY SELECT * FROM mytable RETURN PROBA;
 ```
-- Механика: данные из запроса → преобразование в `float32` тензор → `onnxruntime-web` инференс → объединение с исходными строками по `row_number()`.
 
 ## Ограничения и заметки
 - Файлы до ~2 ГБ (проверка на клиенте в `UploadArea`)

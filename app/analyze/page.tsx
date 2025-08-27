@@ -12,14 +12,22 @@ export default function Analyze() {
   const [table, setTable] = useState<Table | null>(null);
   const [viz, setViz] = useState<'table'|'line'|'bar'>('table');
   const [error, setError] = useState<string | null>(null);
+  const [errorOpen, setErrorOpen] = useState<boolean>(false);
+  const [lastSQL, setLastSQL] = useState<string>('');
 
   const onRun = async (sql: string) => {
     setError(null);
+    setErrorOpen(false);
+    setLastSQL(sql);
     try {
       const res = await runQueryOrPredict(sql);
       setTable(res.data ?? null);
     } catch (e:any) {
-      setError(e.message || String(e));
+      const msg = e?.message || String(e);
+      const hint = /does not exist/i.test(msg)
+        ? 'Таблица не найдена. Сначала загрузите файл и выполните PRAGMA show_tables;'
+        : '';
+      setError([msg, hint].filter(Boolean).join(' '));
       setTable(null);
     }
   };
@@ -53,7 +61,21 @@ export default function Analyze() {
 
       <section className="card" style={{display:'grid', gap: 12}}>
         <SQLStudio onRun={onRun} />
-        {error && <div className="card" style={{background:'#fff7f7', borderColor:'#fecaca'}}><div className="muted" style={{color:'#b91c1c'}}>Ошибка SQL: {error}</div></div>}
+        {error && (
+          <div className="card" style={{background:'#fff7f7', borderColor:'#fecaca'}}>
+            <div className="muted" style={{color:'#b91c1c'}}>Ошибка SQL: {error}</div>
+            <div style={{display:'flex', gap:8, marginTop:8}}>
+              <button className="btn" onClick={()=>setErrorOpen(v=>!v)}>{errorOpen?'Скрыть детали':'Показать детали'}</button>
+              <button className="btn" onClick={()=>onRun('PRAGMA show_tables;')}>Показать таблицы</button>
+            </div>
+            {errorOpen && (
+              <div className="subtle" style={{marginTop:8}}>
+                <div><b>Последний SQL</b>:</div>
+                <pre className="font-mono" style={{whiteSpace:'pre-wrap'}}>{lastSQL}</pre>
+              </div>
+            )}
+          </div>
+        )}
         <div className="flex items-center" style={{gap: 8}}>
           <label className="subtle">Вид</label>
           <select className="select" value={viz} onChange={e=>setViz(e.target.value as any)}>

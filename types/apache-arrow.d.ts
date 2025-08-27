@@ -8,3 +8,4 @@ declare module 'apache-arrow' {
     toString(): string;
   }
 }
+

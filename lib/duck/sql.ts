@@ -33,6 +33,19 @@ export async function listTables(): Promise<string[]> {
   return names;
 }
 
+export async function listColumns(tableName: string): Promise<string[]> {
+  const db = await getDuck();
+  const conn = await db.connect();
+  try {
+    const res = await conn.query(`SELECT name FROM duckdb_columns() WHERE table_name='${tableName}';`);
+    const cols: string[] = [];
+    for (let i = 0; i < (res as any).numRows; i++) cols.push((res as any).get(i).name);
+    return cols;
+  } finally {
+    await conn.close();
+  }
+}
+
 export async function runQueryOrPredict(q: string) {
   const plan = parsePredictDSL(q);
   if (!plan) {

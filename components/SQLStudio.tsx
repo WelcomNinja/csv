@@ -1,10 +1,11 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import { listTables } from '@/lib/duck/sql';
+import { listTables, listColumns } from '@/lib/duck/sql';
 
 export default function SQLStudio({ onRun }: { onRun: (sql: string)=>void }) {
   const [sql, setSql] = useState<string>('PRAGMA show_tables;');
   const [tables, setTables] = useState<string[]>([]);
+  const [columns, setColumns] = useState<Record<string, string[]>>({});
   const [showHints, setShowHints] = useState<boolean>(true);
   const editorRef = useRef<any>(null);
   const monacoRef = useRef<any>(null);
@@ -28,49 +29,71 @@ export default function SQLStudio({ onRun }: { onRun: (sql: string)=>void }) {
     return ()=> { cancelled = true; if (editorRef.current) editorRef.current.dispose(); };
   }, []);
 
-  const insertSQL = (snippet: string) => {
+  const refreshTables = async () => {
+    const t = await listTables();
+    setTables(t);
+    const cols: Record<string, string[]> = {};
+    for (const name of t) {
+      try { cols[name] = await listColumns(name); } catch { cols[name] = []; }
+    }
+    setColumns(cols);
+  };
+
+  const insertText = (snippet: string) => {
     if (editorRef.current) {
       const e = editorRef.current;
       const pos = e.getPosition();
-      e.executeEdits('insert-sql', [{ range: new monacoRef.current.Range(pos.lineNumber, pos.column, pos.lineNumber, pos.column), text: snippet + '\n' }]);
+      e.executeEdits('insert-sql', [{ range: new monacoRef.current.Range(pos.lineNumber, pos.column, pos.lineNumber, pos.column), text: snippet }]);
       e.focus();
     } else {
-      setSql(prev => prev ? prev + '\n' + snippet : snippet);
+      setSql(prev => prev + snippet);
     }
   };
 
-  const firstTable = tables[0];
-  const hintItems: { label: string; sql: string }[] = [
-    { label: 'Показать таблицы', sql: 'PRAGMA show_tables;' },
-    firstTable ? { label: 'Первые 10 строк', sql: `SELECT * FROM ${firstTable} LIMIT 10;` } : null,
-    firstTable ? { label: 'Подсчёт строк', sql: `SELECT COUNT(*) AS cnt FROM ${firstTable};` } : null,
-    firstTable ? { label: 'Топ значений колонки', sql: `-- замените column_name на нужную колонку\nSELECT column_name, COUNT(*) AS cnt\nFROM ${firstTable}\nGROUP BY 1\nORDER BY cnt DESC\nLIMIT 20;` } : null,
-    { label: 'ONNX PREDICT', sql: 'PREDICT USING mymodel WITH QUERY SELECT * FROM mytable LIMIT 100;' }
-  ].filter(Boolean) as any;
+  const run = () => onRun(sql);
 
   return (
-    <div className="space-y-2">
-      <div className="subtle">Таблицы: {tables.join(', ') || '—'}</div>
-
-      {showHints && (
-        <div className="muted" style={{display:'flex', flexWrap:'wrap', gap: 8}}>
-          {hintItems.map((h, idx)=> (
-            <button key={idx} className="btn" onClick={()=>insertSQL(h.sql)}>{h.label}</button>
+    <div style={{display:'grid', gridTemplateColumns:'260px 1fr', gap:12}}>
+      <aside className="card" style={{padding:12}}>
+        <div className="subtle" style={{marginBottom:8}}>Схема</div>
+        <div className="muted" style={{display:'flex', gap:8, marginBottom:8}}>
+          <button className="btn" onClick={refreshTables}>Обновить</button>
+          <button className="btn" onClick={()=>insertText('PRAGMA show_tables;\n')}>Показать таблицы</button>
+        </div>
+        <div style={{maxHeight:300, overflow:'auto'}}>
+          {tables.length === 0 && <div className="subtle">Нет таблиц. Загрузите файл.</div>}
+          {tables.map(t => (
+            <div key={t} style={{marginBottom:8}}>
+              <div style={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
+                <button className="btn" onClick={()=>insertText(`SELECT * FROM ${/[^a-z0-9_]/i.test(t)?`"${t}"`:t} LIMIT 10;\n`)}>{t}</button>
+                <button className="btn" onClick={async()=>{ const cols = await listColumns(t); setColumns(prev=>({...prev,[t]:cols})); }}>Колонки</button>
+              </div>
+              {columns[t]?.length ? (
+                <div className="subtle" style={{marginTop:6, paddingLeft:8}}>
+                  {columns[t].map(c => (
+                    <div key={c} style={{display:'flex', justifyContent:'space-between', gap:8}}>
+                      <span>{c}</span>
+                      <button className="btn" onClick={()=>insertText(`${/[^a-z0-9_]/i.test(c)?`"${c}"`:c}`)}>вставить</button>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
+            </div>
           ))}
-          <button className="btn" onClick={()=>setShowHints(false)}>Скрыть подсказки</button>
         </div>
-      )}
-      {!showHints && (
-        <div>
-          <button className="btn" onClick={()=>setShowHints(true)}>Показать подсказки</button>
-        </div>
-      )}
+      </aside>
 
-      <div id="sql-editor" style={{height: 220, border: '1px solid #e5e7eb', borderRadius: 8}} />
-      <div style={{display:'flex', gap:8}}>
-        <button onClick={()=>onRun(sql)} className="btn btn-primary">Выполнить</button>
-        <button onClick={async()=>setTables(await listTables())} className="btn">Обновить таблицы</button>
-      </div>
+      <section className="card" style={{padding:12, display:'grid', gap:8}}>
+        <div style={{display:'flex', gap:8, alignItems:'center', justifyContent:'space-between'}}>
+          <div className="muted">Таблицы: {tables.join(', ') || '—'}</div>
+          <div style={{display:'flex', gap:8}}>
+            <button className="btn btn-primary" onClick={run}>Выполнить</button>
+            <button className="btn" onClick={()=>insertText('SELECT * FROM  LIMIT 10;')}>Шаблон SELECT</button>
+            <button className="btn" onClick={()=>insertText('SELECT COUNT(*) FROM ;')}>Шаблон COUNT</button>
+          </div>
+        </div>
+        <div id="sql-editor" style={{height: 260, border: '1px solid #e5e7eb', borderRadius: 8}} />
+      </section>
     </div>
   );
 }
