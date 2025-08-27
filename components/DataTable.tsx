@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import type { ArrowTable } from '@duckdb/duckdb-wasm';
+import type { Table } from 'apache-arrow';
 
-export default function DataTable({ table }: { table: ArrowTable | null }) {
+export default function DataTable({ table }: { table: Table | null }) {
   if (!table) return <div className="subtle">Нет данных. Выполните запрос.</div>;
   const cols = table.schema.fields.map((f:any)=>f.name);
   const rows: any[] = [];

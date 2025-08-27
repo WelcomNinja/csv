@@ -1,1 +1,17 @@
+# Node / Next.js
 node_modules
+.next
+.out
+.vercel
+.turbo
+dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env / system
+.env*
+.DS_Store
+*.local

@@ -6,10 +6,10 @@ import DataTable from '@/components/DataTable';
 import ChartView from '@/components/ChartView';
 import { useState, useMemo } from 'react';
 import { runQueryOrPredict } from '@/lib/duck/sql';
-import type { ArrowTable } from '@duckdb/duckdb-wasm';
+import type { Table } from 'apache-arrow';
 
 export default function Analyze() {
-  const [table, setTable] = useState<ArrowTable | null>(null);
+  const [table, setTable] = useState<Table | null>(null);
   const [viz, setViz] = useState<'table'|'line'|'bar'>('table');
   const [error, setError] = useState<string | null>(null);
 
