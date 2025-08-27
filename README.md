@@ -35,7 +35,7 @@ npm run build
 npm run start
 ```
 
-## Quick Start через degit (как у n8n — одна команда)
+## Quick Start через degit 
 ```bash
 npx --yes degit <your-github-user>/WelcomeCSV welcome-csv
 cd welcome-csv
